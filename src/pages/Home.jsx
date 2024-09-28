@@ -31,7 +31,7 @@ const Home = () => {
       </section>
 
       {/* =====AboutUsSection===== */}
-      <section className='py-16 px-20 bg-slate-900 text-white flex flex-col justify-center items-center gap-10 max-sm:px-4' id='about'>
+      <section className='py-16 px-20 bg-slate-900 text-white flex flex-col justify-center items-center gap-10 max-sm:px-4 border-t-[1px] border-white' id='about'>
 
         <div className='flex items-center gap-4 max-lg:flex-col'>
           <div className='flex flex-col'>
@@ -90,7 +90,7 @@ const Home = () => {
           {ourTeam.map((team, index) => {
             return (
               <div key={index}>
-                <img className='w-60 h-80' src={team.img} alt='team' />
+                <img className='w-60 h-80' loading='lazy' src={team.img} alt='team' />
                 <h3 className='text-center text-2xl mt-4'>{team.name}</h3>
               </div>
             )
@@ -99,7 +99,7 @@ const Home = () => {
       </section>
 
       {/* =====Contact===== */}
-      <section className='flex flex-col items-center py-16'>
+      <section className='flex flex-col items-center py-16' id='contact'>
 
         <h3 className='title'>Entre em Contato</h3>
         <div className='separator w-40 my-4'></div>

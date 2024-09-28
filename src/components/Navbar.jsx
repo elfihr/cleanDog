@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { menulinks } from '../helper/helper'
 
 import PetsIcon from '@mui/icons-material/Pets';
@@ -17,6 +17,17 @@ const Navbar = () => {
     }
     window.addEventListener('scroll', changeColor)
 
+    const btnRef = useRef()
+
+    useEffect(() => {
+        const closeDropdown = e => {
+            if (!btnRef.current.contains(e.target)) {
+                setIsMobile(false);
+            }
+        }
+        document.body.addEventListener('click', closeDropdown)
+        return () => document.body.removeEventListener('click', closeDropdown)
+    }, [])
 
 
     return (
@@ -39,7 +50,7 @@ const Navbar = () => {
                 })}
 
             </div>
-            <div className="text-black hidden max-lg:block" onClick={() => setIsMobile(!isMobile)} >
+            <div className="text-black hidden max-lg:block" onClick={() => setIsMobile(!isMobile)}  ref={btnRef}>
                 {<Hamburger toggled={isMobile} toggle={setIsMobile} />}
             </div>
         </nav>

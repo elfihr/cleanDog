@@ -17,7 +17,7 @@ const Footer = () => {
         <div className='w-80 flex flex-col gap-4'>
           <h3 className='text-2xl'><span className='text-red-400 font-bold'>Clean</span><span className='text-sky-500 font-bold'>Dog</span></h3>
           <p className='text-white'>Cuidando do seu pet com carinho e profissionalismo</p>
-          <div className='social'>
+          <div className='social flex gap-2'>
             <FacebookIcon />
             <InstagramIcon />
             <XIcon />

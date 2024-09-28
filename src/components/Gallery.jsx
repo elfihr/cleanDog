@@ -52,7 +52,7 @@ const gallery = () => {
         {ourGallery.map((gallery, index) => {
           return (
             <div key={index}>
-              <img className='h-60 w-80 select-none' src={gallery.image} />
+              <img className='h-60 w-[22rem] select-none' src={gallery.image} />
             </div>
 
           )
