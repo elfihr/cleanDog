@@ -16,14 +16,15 @@ const Home = () => {
       {/* =====HeroSection===== */}
       <section
         style={{ backgroundImage: `url(${heroImg})` }}
-        className='min-h-[100vh] bg-fixed bg-center bg-cover flex flex-col justify-center max-sm:bg-scroll' id='home'>
+        className='min-h-[100vh] bg-fixed bg-center bg-cover flex flex-col justify-center max-sm:bg-scroll  max-sm:min-h-[80vh]' id='home'>
 
-        <div className='text-white ml-20 flex flex-col gap-2'>
-          <h3 className='text-5xl'>Bem Vindo ao <span className='text-red-400 font-bold'>Clean</span><span className='text-sky-500 font-bold'>Dog</span></h3>
-          <p className='text-2xl'>Cuidando do seu pet com amor e carinho</p>
+        <div className='text-white ml-20 flex flex-col  gap-4 max-sm:ml-8'>
+          <h3 className='text-7xl font-bold max-sm:text-5xl'>Bem Vindo ao <span className='text-red-400 '>Clean</span><span className='text-sky-500 font-bold'>Dog</span></h3>
+          <p className='text-5xl max-sm:text-3xl'>Cuidando do seu pet com amor e carinho</p>
           <a href='https://wa.me/'>
-            <button className='btn w-52'>
-              <WhatsAppIcon />Fale Conosco
+            <button className='btn'>
+              <WhatsAppIcon className='scale-125' />
+              <h3 className='text-3xl '>Fale Conosco</h3>        
             </button>
           </a>
 
@@ -33,8 +34,8 @@ const Home = () => {
       {/* =====AboutUsSection===== */}
       <section className='py-16 px-20 bg-slate-900 text-white flex flex-col justify-center items-center gap-10 max-sm:px-4 border-t-[1px] border-white' id='about'>
 
-        <div className='flex items-center gap-4 max-lg:flex-col'>
-          <div className='flex flex-col'>
+        <div className='flex items-center justify-center gap-4 max-lg:flex-col'>
+          <div className='flex flex-col items-center justify-center'>
             <h3 className='title'>Sobre Nós</h3>
             <div className='separator w-20 my-4'></div>
             <p className='text-[1.2rem]'>Empresa fundada em 2014 com objetivo de proporcionar serviços de qualidade, com segurança e amor, garantindo o bem-estar e a felicidade dos pets.
@@ -73,7 +74,7 @@ const Home = () => {
       </section>
 
       {/* =====Gallery===== */}
-      <section className='px-20 py-16 flex flex-col ' id='gallery'>
+      <section className='px-20 py-16 flex flex-col max-sm:px-10' id='gallery'>
         <div className='flex flex-col items-center'>
           <h3 className='title'>Galeria de Fotos</h3>
           <div className='separator w-40 my-4'></div>
